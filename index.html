@@ -290,77 +290,173 @@
         }
 
         /* Mascot Gallery */
-        .mascot-gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+        .mascot-section {
+            padding: 5rem 4rem;
+            background: var(--branco);
         }
 
-        .mascot-item {
-            position: relative;
-            aspect-ratio: 1;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .mascot-item img {
-            width: 60%;
-            height: auto;
-            object-fit: contain;
-            transition: transform 0.5s ease;
-        }
-
-        .mascot-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .mascot-bg-verde {
-            background: var(--verde-claro);
-        }
-
-        .mascot-bg-creme {
-            background: var(--creme);
-        }
-
-        .mascot-bg-laranja {
-            background: linear-gradient(135deg, var(--laranja-quente), #E8855A);
-        }
-
-        .mascot-bg-escuro {
-            background: var(--verde-escuro);
-        }
-
-        .brand-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .mascot-header {
             text-align: center;
-            z-index: 2;
-            pointer-events: none;
+            margin-bottom: 3rem;
         }
 
-        .brand-text {
+        .mascot-title {
             font-family: 'Kaushan Script', cursive;
             font-size: 2.5rem;
             color: var(--verde-escuro);
-            text-shadow: 0 2px 10px rgba(255,255,255,0.5);
+            margin-bottom: 0.5rem;
         }
 
-        .brand-tagline {
-            font-size: 0.7rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
+        .mascot-subtitle {
+            font-size: 0.9rem;
+            color: var(--cinza-texto);
+        }
+
+        .mascot-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .mascot-card {
+            background: var(--creme);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .mascot-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(26, 66, 53, 0.15);
+        }
+
+        .mascot-card img {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        .mascot-card h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
             color: var(--verde-escuro);
-            margin-top: 0.5rem;
-            opacity: 0.8;
+            margin-bottom: 0.25rem;
+        }
+
+        .mascot-card p {
+            font-size: 0.75rem;
+            color: var(--cinza-texto);
+            margin-bottom: 1rem;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--verde-escuro);
+            color: var(--creme);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: var(--laranja-quente);
+            transform: scale(1.05);
+        }
+
+        .download-btn svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        /* Prompt Section */
+        .prompt-section {
+            padding: 5rem 4rem;
+            background: var(--verde-escuro);
+        }
+
+        .prompt-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .prompt-title {
+            font-family: 'Kaushan Script', cursive;
+            font-size: 2.5rem;
+            color: var(--creme);
+            margin-bottom: 0.5rem;
+        }
+
+        .prompt-subtitle {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .prompt-box {
+            background: rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .prompt-text {
+            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: var(--creme);
+            line-height: 1.8;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .prompt-highlight {
+            background: var(--laranja-quente);
+            color: var(--branco);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .copy-prompt-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: var(--verde-claro);
+            color: var(--verde-escuro);
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            border: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 1.5rem auto 0;
+            transition: all 0.3s ease;
+        }
+
+        .copy-prompt-btn:hover {
+            background: var(--amarelo-dourado);
+            transform: scale(1.05);
+        }
+
+        .copy-prompt-btn svg {
+            width: 18px;
+            height: 18px;
         }
 
         /* Downloads Section */
         .downloads {
             padding: 5rem 4rem;
-            background: var(--branco);
+            background: var(--creme);
         }
 
         .downloads-header {
@@ -384,12 +480,12 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
-            max-width: 1000px;
+            max-width: 600px;
             margin: 0 auto;
         }
 
         .download-card {
-            background: var(--creme);
+            background: var(--branco);
             border-radius: 16px;
             padding: 1.5rem;
             text-align: center;
@@ -422,30 +518,6 @@
             font-size: 0.75rem;
             color: var(--cinza-texto);
             margin-bottom: 1rem;
-        }
-
-        .download-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--verde-escuro);
-            color: var(--creme);
-            padding: 0.6rem 1.2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .download-btn:hover {
-            background: var(--laranja-quente);
-            transform: scale(1.05);
-        }
-
-        .download-btn svg {
-            width: 16px;
-            height: 16px;
         }
 
         /* Footer */
@@ -490,6 +562,12 @@
         }
 
         /* Responsive */
+        @media (max-width: 1200px) {
+            .mascot-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
         @media (max-width: 992px) {
             .hero-title {
                 font-size: 3rem;
@@ -516,8 +594,14 @@
             .alt-logos,
             .color-palette,
             .type-section,
-            .downloads {
+            .downloads,
+            .mascot-section,
+            .prompt-section {
                 padding: 3rem 2rem;
+            }
+
+            .mascot-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -553,29 +637,28 @@
                 height: 70px;
             }
 
-            .mascot-gallery {
-                grid-template-columns: 1fr;
-            }
-
             .font-specimen {
                 font-size: 2.5rem;
             }
 
-            .font-guide-title {
+            .font-guide-title,
+            .mascot-title,
+            .downloads-title,
+            .prompt-title {
                 font-size: 2rem;
             }
 
-            .brand-text {
-                font-size: 1.8rem;
+            .downloads-grid {
+                grid-template-columns: 1fr;
             }
 
-            .downloads-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .prompt-text {
+                font-size: 0.8rem;
             }
         }
 
         @media (max-width: 480px) {
-            .downloads-grid {
+            .mascot-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -670,34 +753,136 @@
         </div>
     </section>
 
-    <!-- Mascot Gallery -->
-    <section class="mascot-gallery">
-        <div class="mascot-item mascot-bg-creme">
-            <img src="assets/pose-4.png" alt="Mana - Pose da Árvore">
-            <div class="brand-overlay">
-                <div class="brand-text">Mana Medita</div>
-                <div class="brand-tagline">Yoga & Meditação</div>
+    <!-- Mascot Section -->
+    <section class="mascot-section">
+        <div class="mascot-header">
+            <h2 class="mascot-title">Mascote Mana</h2>
+            <p class="mascot-subtitle">Poses e expressões da personagem</p>
+        </div>
+        
+        <div class="mascot-grid">
+            <div class="mascot-card">
+                <img src="assets/pose-3.png" alt="Mana - Pose Padrão">
+                <h4>Padrão</h4>
+                <p>Pose em pé</p>
+                <a href="downloads/pose-3.png" download class="download-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Baixar
+                </a>
+            </div>
+            
+            <div class="mascot-card">
+                <img src="assets/pose-4.png" alt="Mana - Pose da Árvore">
+                <h4>Árvore</h4>
+                <p>Vrksasana</p>
+                <a href="downloads/pose-4.png" download class="download-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Baixar
+                </a>
+            </div>
+            
+            <div class="mascot-card">
+                <img src="assets/pose-6.png" alt="Mana - Pose do Guerreiro">
+                <h4>Guerreiro</h4>
+                <p>Virabhadrasana</p>
+                <a href="downloads/pose-6.png" download class="download-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Baixar
+                </a>
+            </div>
+            
+            <div class="mascot-card">
+                <img src="assets/pose-5.png" alt="Mana - Cachorro Olhando para Baixo">
+                <h4>Cachorro</h4>
+                <p>Adho Mukha Svanasana</p>
+                <a href="downloads/pose-5.png" download class="download-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Baixar
+                </a>
+            </div>
+            
+            <div class="mascot-card">
+                <img src="assets/pose-2.png" alt="Mana - Pose da Vaca">
+                <h4>Vaca</h4>
+                <p>Bitilasana</p>
+                <a href="downloads/pose-2.png" download class="download-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Baixar
+                </a>
+            </div>
+            
+            <div class="mascot-card">
+                <img src="assets/pose-1.png" alt="Mana - Pose da Criança">
+                <h4>Criança</h4>
+                <p>Balasana</p>
+                <a href="downloads/pose-1.png" download class="download-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Baixar
+                </a>
+            </div>
+            
+            <div class="mascot-card">
+                <img src="assets/pose-lendo.png" alt="Mana - Lendo">
+                <h4>Lendo</h4>
+                <p>Concentrada</p>
+                <a href="downloads/pose-lendo.png" download class="download-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Baixar
+                </a>
+            </div>
+            
+            <div class="mascot-card">
+                <img src="assets/pose-brava.png" alt="Mana - Brava">
+                <h4>Brava</h4>
+                <p>Expressão de raiva</p>
+                <a href="downloads/pose-brava.png" download class="download-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Baixar
+                </a>
             </div>
         </div>
-        
-        <div class="mascot-item mascot-bg-verde">
-            <img src="assets/pose-6.png" alt="Mana - Pose do Guerreiro">
+    </section>
+
+    <!-- Prompt Section -->
+    <section class="prompt-section">
+        <div class="prompt-header">
+            <h2 class="prompt-title">Prompt para Gerar Novas Poses</h2>
+            <p class="prompt-subtitle">Use este prompt para criar novas ilustrações da mascote com IA</p>
         </div>
         
-        <div class="mascot-item mascot-bg-laranja">
-            <img src="assets/pose-2.png" alt="Mana - Pose da Vaca">
-        </div>
-        
-        <div class="mascot-item mascot-bg-escuro">
-            <img src="assets/pose-5.png" alt="Mana - Cachorro Olhando para Baixo">
+        <div class="prompt-box">
+            <p class="prompt-text">Uma ilustração fofa, no mesmo estilo e paleta de cores da imagem de referência, mostrando a mesma menina. Ela tem longos cabelos ruivos cacheados, olhos castanhos e está usando seus fones de ouvido verdes grandes, uma camiseta verde de manga curta e shorts verdes. A personagem está <span class="prompt-highlight">[INSERIR AÇÃO/POSIÇÃO AQUI, ex: sentada no chão com as pernas cruzadas, pulando de alegria, acenando, correndo, etc.]</span>. O fundo permanece branco e limpo.</p>
+            
+            <button class="copy-prompt-btn" onclick="copyPrompt()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                Copiar Prompt
+            </button>
         </div>
     </section>
 
     <!-- Downloads Section -->
     <section class="downloads">
         <div class="downloads-header">
-            <h2 class="downloads-title">Downloads</h2>
-            <p class="downloads-subtitle">Baixe os arquivos da identidade visual</p>
+            <h2 class="downloads-title">Logos</h2>
+            <p class="downloads-subtitle">Baixe os logos da marca</p>
         </div>
         
         <div class="downloads-grid">
@@ -724,78 +909,6 @@
                     Baixar
                 </a>
             </div>
-            
-            <div class="download-card">
-                <img src="downloads/pose-3.png" alt="Mascote Padrão" class="download-preview">
-                <h4>Mascote - Padrão</h4>
-                <p>Pose em pé</p>
-                <a href="downloads/pose-3.png" download class="download-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                    </svg>
-                    Baixar
-                </a>
-            </div>
-            
-            <div class="download-card">
-                <img src="downloads/pose-4.png" alt="Mascote Árvore" class="download-preview">
-                <h4>Mascote - Árvore</h4>
-                <p>Vrksasana</p>
-                <a href="downloads/pose-4.png" download class="download-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                    </svg>
-                    Baixar
-                </a>
-            </div>
-            
-            <div class="download-card">
-                <img src="downloads/pose-6.png" alt="Mascote Guerreiro" class="download-preview">
-                <h4>Mascote - Guerreiro</h4>
-                <p>Virabhadrasana</p>
-                <a href="downloads/pose-6.png" download class="download-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                    </svg>
-                    Baixar
-                </a>
-            </div>
-            
-            <div class="download-card">
-                <img src="downloads/pose-5.png" alt="Mascote Cachorro" class="download-preview">
-                <h4>Mascote - Cachorro</h4>
-                <p>Adho Mukha Svanasana</p>
-                <a href="downloads/pose-5.png" download class="download-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                    </svg>
-                    Baixar
-                </a>
-            </div>
-            
-            <div class="download-card">
-                <img src="downloads/pose-2.png" alt="Mascote Vaca" class="download-preview">
-                <h4>Mascote - Vaca</h4>
-                <p>Bitilasana</p>
-                <a href="downloads/pose-2.png" download class="download-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                    </svg>
-                    Baixar
-                </a>
-            </div>
-            
-            <div class="download-card">
-                <img src="downloads/pose-1.png" alt="Mascote Criança" class="download-preview">
-                <h4>Mascote - Criança</h4>
-                <p>Balasana</p>
-                <a href="downloads/pose-1.png" download class="download-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                    </svg>
-                    Baixar
-                </a>
-            </div>
         </div>
     </section>
 
@@ -812,6 +925,16 @@
         function copyColor(hex) {
             navigator.clipboard.writeText(hex).then(function() {
                 showToast(hex + ' copiado!');
+            }).catch(function() {
+                showToast('Não foi possível copiar');
+            });
+        }
+
+        function copyPrompt() {
+            var prompt = 'Uma ilustração fofa, no mesmo estilo e paleta de cores da imagem de referência, mostrando a mesma menina. Ela tem longos cabelos ruivos cacheados, olhos castanhos e está usando seus fones de ouvido verdes grandes, uma camiseta verde de manga curta e shorts verdes. A personagem está [INSERIR AÇÃO/POSIÇÃO AQUI, ex: sentada no chão com as pernas cruzadas, pulando de alegria, acenando, correndo, etc.]. O fundo permanece branco e limpo.';
+            
+            navigator.clipboard.writeText(prompt).then(function() {
+                showToast('Prompt copiado!');
             }).catch(function() {
                 showToast('Não foi possível copiar');
             });
